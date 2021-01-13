@@ -2,15 +2,7 @@
 
 Why do we add the script tag at the bottom of `body` element?
 
-*Demo putting the script tag at the top of the `body` element and selecting an element. Demo putting the script tag at the bottom of the `body` element and selecting the same element.*
-
-What about document ready?
-https://www.sitepoint.com/jquery-document-read-plain-javascript
-```
-jQuery(function($) {
-  // Document ready isn't necessary if you add the script tag at the bottom of the `body` element
-})
-```
+*Try putting the script tag at the top of the `body` element and selecting an element. Try putting the script tag at the bottom of the `body` element and selecting the same element.*
 ```
 const element = document.querySelector('div');
 console.log(element);
