@@ -158,7 +158,7 @@ document.querySelector('body').childNodes;
 ```
 These getters target elements:
 
-* `element.firstElementChild``
+* `element.firstElementChild`
 * `element.lastElementChild`
 * `element.previousElementSibling`
 * `element.nextElementSibling`
