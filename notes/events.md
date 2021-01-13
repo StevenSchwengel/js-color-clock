@@ -7,7 +7,7 @@ button.addEventListener('click', callback);
 ```
 button.removeEventListener(functionName);
 ```
-You cannot remove an eventListener if you added it as an anonymous function. It can't be reference for removal.
+You cannot remove an eventListener if you added it as an anonymous function. It can't be referenced for removal.
 ```
  const buttons = document.querySelectorAll('button');
 ```
@@ -26,13 +26,11 @@ function handleButtonClick(event) {
   /* The event object is the first argument passed when an event fires */
   console.log(event);
 
-  /* Instructor notes */
   /* event.isTrusted -> true if it's a mouse event; false if mouse event is faked with JS */
-  /* event.pressure -> newer iPads there are pressure sensitivity values */
+  /* event.pressure -> newer iPads have pressure sensitivity values */
 
   console.log(event.target);
 
-  /* Instructor notes */
   /* event.target vs. event.currentTarget */
   /* The difference comes in when you have nested elements */
   /* event.target is what the user clicks, e.g. a strong tag inside a button */
@@ -90,7 +88,7 @@ The process by which an event can be handled by one of the target’s ancestors 
 
 https://www.w3.org/TR/uievents/#event-flow
 
-When you listen for any eventThere is an option, you have the option to listen on the capture phase. To listen on the capture phase, pass an optional options object as the third argument to `addEventListener`.
+When you listen for any event, you have the option to listen on the capture phase. To listen on the capture phase, pass an optional options object as the third argument to `addEventListener`.
 ```
 function handleButtonClick() {
   console.log('You clicked a button!');
