@@ -15,7 +15,6 @@ function formatAMPM(date) {
 }
 
 
-
 function display_ct6() {
   var x = new Date()
   var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
@@ -51,6 +50,9 @@ function display_ct6() {
    var boxProgress = lseconds / 60;
    console.log(boxProgress.toFixed(2));
 
+
+
+
 /*
     function move(){
         var width = 1;
@@ -74,6 +76,8 @@ function hexaTime() {
 }
  console.log(hexaTime());
 
+ // working model (after lecture is...
+//  progressBar.style.width = `${seconds / 60 * 14}rem`
 
 // MAIN Part of CODE
 
@@ -88,8 +92,13 @@ function hexaTime() {
 function display_c6(){
 var refresh=1000; // Refresh rate in milli seconds
 mytime=setTimeout('display_ct6()',refresh)
+
+
+
 }
 display_c6()
+
+
 
 
 //document.getElementById("datetime").innerHTML = dt.toLocaleString();
