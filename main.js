@@ -96,4 +96,6 @@ mytime=setTimeout('display_ct6()',refresh)
 }
 display_c6()
 
+// console.log('testing');
+
 //document.getElementById("datetime").innerHTML = dt.toLocaleString();
