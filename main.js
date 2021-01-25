@@ -4,8 +4,15 @@
 //  Normal Clock time part is above
 
 let isHovering = false;
+const clock = document.querySelector('.clock');
 
+clock.addEventListener('mouseover', function() {
+  isHovering = true;
+});
 
+clock.addEventListener('mouseout', function() {
+  isHovering = false;
+});
 
 function formatAMPM(date) {
   var hours = date.getHours();
@@ -45,10 +52,12 @@ function display_ct6() {
   }
 
 
-  if(!isHovering) {
+  if(isHovering) {
     var x1 = hours.toString(16) + ":" + lminutes.toString(16) + ":" + lseconds.toString(16);
+    console.log('x1', x1);
   } else {
     var x1 = hours + ":" + lminutes + ":" + lseconds;
+    console.log('x1', x1);
 
   }
 
@@ -100,7 +109,7 @@ function display_ct6() {
 
 //    style.backgroundColor = "red";
 
-    console.log("returning hex",hex);
+    // console.log("returning hex",hex);
   //    return hex;
   }
 
