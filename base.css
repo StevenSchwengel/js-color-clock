@@ -1,5 +1,5 @@
 .clock {
-  background: #018DED;
+/*  background: #018DED; */
   width: 30rem;
   height: 30rem;
   margin: 50px auto;
@@ -19,4 +19,13 @@
   background-color: #fff;
   height: .25rem;
   width: 14rem;
+}
+
+
+.clock:hover {
+  background-color: yellow;
+}
+
+.de {
+  color:green;
 }

@@ -3,6 +3,10 @@
 
 //  Normal Clock time part is above
 
+let isHovering = false;
+
+
+
 function formatAMPM(date) {
   var hours = date.getHours();
   var minutes = date.getMinutes();
@@ -24,6 +28,8 @@ function display_ct6() {
   lminutes = x.getMinutes();
   lseconds = x.getSeconds();
 
+  // Is the user hovering?
+
   /*  console.log(lhours, lminutes, lseconds); */
 
   if (hours < 10) {
@@ -38,8 +44,15 @@ function display_ct6() {
     lseconds = lseconds.toString().padStart(2, 0);
   }
 
-  var x1 = hours + ":" + lminutes + ":" + lseconds;
-  var hexTime = hours + lminutes + lseconds;
+
+  if(!isHovering) {
+    var x1 = hours.toString(16) + ":" + lminutes.toString(16) + ":" + lseconds.toString(16);
+  } else {
+    var x1 = hours + ":" + lminutes + ":" + lseconds;
+
+  }
+
+
 
   //console.log(hexTime);
 
@@ -76,6 +89,7 @@ function display_ct6() {
 
 
 
+  // function toHex(sec) {
   function toHex(sec) {
    var date = new Date();
     var sec = parseInt(date.getSeconds() * 255 / 59);
